@@ -1,0 +1,80 @@
+<mat-sidenav-container id="sidenavContainer">
+  <mat-sidenav #sidenav mode="side" id="sidenav" opened>
+    <button mat-button (click)="prikaziOdecu()" [ngClass]="prikaziOd ? 'siva': 'bela'">
+      <span class="sidenavButtonName">Odeća</span>
+    </button>
+    <button mat-button (click)="prikaziObucu()" [ngClass]="prikaziOb ? 'siva': 'bela'">
+      <span class="sidenavButtonName">Obuća</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <mat-tab-group *ngIf="prikaziOd">
+          <mat-tab *ngFor="let el of counter.odeca;" label="{{el.mz}}">
+           <mat-tab-group>
+             <mat-tab *ngFor="let gd of el.gd;" label="{{gd.naslov}}">
+              <div *ngFor="let proizvod of gd.proizvodi;" class="elements">
+                <div class="inner1" (click)="zoom(proizvod)">
+                  <img class="photo" src="../../../assets/ph.png">
+                  <div>
+                      <div class="naziv">
+                        {{proizvod.naziv}}
+                      </div>
+                      <div class="oProizvodu">
+                        {{proizvod.oProizvodu}}
+                      </div>
+                  </div>
+                </div>
+                <div class="inner2">
+                  <div class="dugmici">
+                    <button mat-raised-button class="plus" (click)="plus(proizvod)"><mat-icon>add</mat-icon></button>
+                    <button mat-raised-button class="minus" (click)="minus(proizvod)"><mat-icon>remove</mat-icon></button>
+                  </div>
+                  <div class="kolicina">
+                    {{proizvod.kolicina}}
+                  </div>
+                  <div class="cena">
+                    {{proizvod.cena.toFixed(2)}} din.
+                  </div>
+                </div>
+             </div>
+             </mat-tab>
+           </mat-tab-group>
+          </mat-tab>
+     </mat-tab-group>
+     <mat-tab-group *ngIf="prikaziOb">
+        <mat-tab *ngFor="let el of counter.obuca;" label="{{el.mz}}">
+         <mat-tab-group>
+           <mat-tab *ngFor="let cp of el.cp;" label="{{cp.naslov}}">
+            <div *ngFor="let proizvod of cp.proizvodi;" class="elements">
+              <div class="inner1" (click)="zoom(proizvod)">
+                <img class="photo" src="../../../assets/ph.png">
+                <div>
+                    <div class="naziv">
+                      {{proizvod.naziv}}
+                    </div>
+                    <div class="oProizvodu">
+                      {{proizvod.oProizvodu}}
+                    </div>
+                </div>
+              </div>
+              <div class="inner2">
+                <div class="dugmici">
+                  <button mat-raised-button class="plus" (click)="plus(proizvod)"><mat-icon>add</mat-icon></button>
+                  <button mat-raised-button class="minus" (click)="minus(proizvod)"><mat-icon>remove</mat-icon></button>
+                </div>
+                <div class="kolicina">
+                  {{proizvod.kolicina}}
+                </div>
+                <div class="cena">
+                  {{proizvod.cena.toFixed(2)}} din.
+                </div>
+              </div>
+           </div>
+           </mat-tab>
+         </mat-tab-group>
+        </mat-tab>
+     </mat-tab-group>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<button mat-icon-button id="toggleButton" (click)="sidenav.toggle()"><mat-icon>sync_alt</mat-icon></button>
+<router-outlet></router-outlet>

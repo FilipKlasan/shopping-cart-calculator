@@ -1,0 +1,136 @@
+#sidenavContainer {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#sidenav {
+    width: 15%;
+}
+
+.bela, .siva {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    outline: none;
+    text-align: left;
+    border-radius: 0;
+    color: rgb(15, 9, 27);
+}
+
+.siva {
+    background-color: rgb(230, 230, 230);
+}
+
+.sidenavButtonName {
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(60, 60, 60);
+}
+
+#toggleButton {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    outline: none;
+    background-color: rgb(96, 63, 177);
+    color: white;
+    z-index: 100;
+}
+
+.elements {
+    display: inline-block;
+    width: 300px;
+    padding: 15px;
+    margin: 15px 0 0 15px;
+    background-color: white;
+    text-align: left;
+    border-radius: 8px;
+    border-top: 1px solid rgb(246, 246, 246);
+    border-right: 1px solid rgb(236, 236, 236);
+    border-bottom: 1px solid rgb(164, 164, 164);
+    border-left: 1px solid rgb(236, 236, 236);
+}
+
+.inner1 {
+    display: grid;
+    grid-template-columns: 120px auto;
+    border-bottom: rgb(246, 246, 246);
+    margin-bottom: 15px;
+}
+
+.inner1:hover {
+    cursor: pointer;
+}
+
+.inner2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.photo {
+    width: 85px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.naziv, .kolicina, .cena {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(60, 60, 60);
+} 
+
+.kolicina, .cena {
+    padding-top: 10px;
+} 
+
+.oProizvodu {
+    height: 50px;
+    overflow: hidden;
+    font-size: 11px;
+    color: rgb(118, 118, 118);
+}
+
+.dugmici {
+    text-align: left;
+}
+
+.plus, .minus {
+    color: rgb(60, 60, 60);
+    outline: none;
+    border-radius: 5px;
+}
+
+.plus {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: rgb(60, 60, 60);
+    outline: none;
+}
+
+.minus {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#cena {
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+
+    #sidenav {
+       width: 23%; 
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    #sidenav {
+       width: 33%; 
+    }
+
+}

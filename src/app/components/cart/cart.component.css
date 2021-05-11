@@ -1,0 +1,42 @@
+#okvir {
+  height: auto;
+  max-height: 330px;
+  overflow: auto;
+  padding: 2px;
+}
+
+#okvir::-webkit-scrollbar {
+    width: 6px;
+}
+
+#okvir::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+
+#okvir::-webkit-scrollbar-thumb {
+    background: rgb(214, 214, 214);
+    border-radius: 20px;
+}
+
+#okvir::-webkit-scrollbar-thumb:hover{
+    background: rgb(180, 180, 180);
+}
+
+div {
+  font-size: 12px;
+  color: rgb(60, 60, 60);
+}
+
+.q {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.mat-icon-button {
+  outline: none;
+}
+
+#konacnaCena {
+    border-top: 1px solid rgb(230, 230, 230);
+    font-weight: 700;
+}

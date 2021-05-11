@@ -1,0 +1,41 @@
+#unutrasnji {
+    height: auto;
+    max-height: 330px;
+    overflow: auto;
+    padding: 2px;
+}
+  
+#unutrasnji::-webkit-scrollbar {
+    width: 6px;
+}
+  
+#unutrasnji::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+  
+#unutrasnji::-webkit-scrollbar-thumb {
+    background: rgb(214, 214, 214);
+    border-radius: 20px;
+}
+  
+#unutrasnji::-webkit-scrollbar-thumb:hover{
+    background: rgb(180, 180, 180);
+}
+
+#proizvod {
+    text-align: center;
+    font-size: 15px;
+    color: rgb(60, 60, 60);
+}
+
+img {
+    height: 200px;
+    width: 100%;
+    border-radius: 5px; 
+}
+
+#oProizvodu {
+    text-align: left;
+    font-size: 12px;
+    color: rgb(118, 118, 118);
+}

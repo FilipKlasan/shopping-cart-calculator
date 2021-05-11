@@ -1,0 +1,42 @@
+<mat-toolbar style="margin-bottom: 15px; color: white; border-radius: 3px; background-color: rgb(96, 63, 177);"><h5>Izabrani proizvodi</h5></mat-toolbar>
+<div id="okvir">
+    <div *ngFor="let o of counter.odeca;">
+        <div *ngFor="let g of o.gd">
+          <div *ngFor="let p of g.proizvodi">
+            <div *ngIf="p.kolicina > 0" class="q">
+            <div style="text-align: left;">
+              <div>{{p.naziv}} x {{p.kolicina}}</div>
+              <div>Cena: {{(p.cena * p.kolicina).toFixed(2)}} din.</div>
+            </div>
+            <div style="text-align: right;">
+              <button mat-icon-button (click)="ukloni(p)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div><br>
+            </div>
+          </div>
+        </div>
+     </div>
+     <div *ngFor="let o of counter.obuca;">
+        <div *ngFor="let c of o.cp">
+          <div *ngFor="let p of c.proizvodi">
+            <div *ngIf="p.kolicina > 0" class="q">
+            <div style="text-align: left;">
+              <div>{{p.naziv}} x {{p.kolicina}}</div>
+              <div>Cena: {{(p.cena * p.kolicina).toFixed(2)}} din.</div>
+            </div>
+            <div style="text-align: right;">
+              <button mat-icon-button (click)="ukloni(p)">
+                <mat-icon>delete</mat-icon>
+               </button>
+            </div><br>
+            </div>
+          </div>
+        </div>
+     </div>
+</div>
+<div id="konacnaCena">
+  <br>
+  <div>Konačna cena</div>
+  <div>{{counter.konacnaCena.toFixed(2)}} din.</div>
+</div>

@@ -1,0 +1,22 @@
+<mat-toolbar id="nb">
+    <button mat-icon-button id="menu" [matMenuTriggerFor]="menu">
+       <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu> 
+       <button mat-menu-item class="menuButtons">
+          <mat-icon class="menuIcons">home</mat-icon>
+       </button>
+       <button mat-menu-item class="menuButtons" (click)="total()">
+          <mat-icon class="menuIcons">shopping_cart</mat-icon>
+       </button>
+    </mat-menu>
+    <div id="cnt">
+       <div id="left">
+          <button mat-button class="buttonsN" style="background-color: rgb(80, 53, 150);"><mat-icon>home</mat-icon></button>
+       </div>
+       <div id="right">
+          <button mat-button class="buttonsN" style="background-color: rgb(80, 53, 150);" (click)="total()"><mat-icon>shopping_cart</mat-icon></button>
+       </div>
+    </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

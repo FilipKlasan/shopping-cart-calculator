@@ -1,0 +1,63 @@
+#nb {
+    background-color: rgb(96, 63, 177);
+    z-index: -1;
+  }
+  
+  #cnt {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+  }
+  
+  #left {
+    text-align: left;
+  }
+  
+  #right {
+    text-align: right;
+    padding: 2px 5px 0 0;
+  }
+  
+  #menu {
+    display: none;
+  }
+  
+  .example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .menuButtons {
+    text-align: center;
+    outline: none;
+  }
+
+  .menuIcons {
+    color: rgb(60, 60, 60);
+  }
+  
+  .buttonsN {
+    color: white;
+    outline: none;
+    font-size: 13px;
+    border-radius: 3px;
+  }
+  
+  @media(max-width: 800px) {
+  
+    #cnt {
+      display: none;
+    }
+  
+    #left, #right {
+      display: none;
+    }
+  
+    #menu {
+      display: inline;
+      outline: none;
+      color: white;
+    }
+    
+  }
